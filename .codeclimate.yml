@@ -1,0 +1,5 @@
+---
+  version: "2"
+  plugins:
+    rubocop-test:
+      enabled: true

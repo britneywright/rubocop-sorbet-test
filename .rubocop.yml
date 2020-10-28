@@ -1,0 +1,59 @@
+require: 'rubocop-sorbet'
+
+# inherit_from:
+#   rubocop-shopify: rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+  - 'vendor/**/*'
+
+Sorbet:
+  Enabled: true
+
+Sorbet/ValidSigil:
+  Enabled: true
+
+Sorbet/TrueSigil:
+  Enabled: true
+
+Sorbet/EnforceSigilOrder:
+  Enabled: true
+
+Style/GlobalVars:
+  AllowedVariables:
+    - $statsd
+    - $redis
+
+Style/FormatString:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Rails/Date:
+  Enabled: false
+
+Rails/TimeZone:
+  Enabled: false
